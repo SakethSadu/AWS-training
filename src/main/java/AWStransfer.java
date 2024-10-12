@@ -41,10 +41,10 @@ public class AWStransfer {
     	//s3Service.bucketsListInAccount();
 
     	//String keyName = "Test-file-"+LocalDateTime.now()+".txt"; //The file name you want in your S3 bucket
-    	String keyName = "Test-file3.txt";
+    	String keyName = "Test-file2.txt";
     	String filePath = "s3UploadFileTest.txt"; //The path where your file is located
     	//String filePath = "ibrd_loans_and_guarantees_historical_data_12-10-2024.csv";
-    	//s3Service.uploadObjectsToBucket(bucketName,keyName, filePath);
+    	s3Service.uploadObjectsToBucket(bucketName,keyName, filePath);
     	//s3Service.listNumberOfObjectsInBucket(bucketName);
     	//String downloadPath = "FileFromS3Downloaded.txt"; //The path where you want to download your file from S3 bucket
     	//s3Service.downloadFileFromBucket(bucketName, keyName, downloadPath);
@@ -52,8 +52,8 @@ public class AWStransfer {
     	String destKeyName = "copiedFileFromOtherBucket.txt";
     	//s3Service.copyObjectInBucket(bucketName, keyName, destBucketName, destKeyName);
     	//s3Service.deleteObjectFromBucket(keyName, bucketName);
-    	List<String> keyNamestoDelete = Arrays.asList(keyName, "Test-file2.txt");
-    	s3Service.deleteMultipleObjectsFromBucket(bucketName, keyNamestoDelete);
+    	//List<String> keyNamestoDelete = Arrays.asList(keyName, "Test-file2.txt");
+    	//s3Service.deleteMultipleObjectsFromBucket(bucketName, keyNamestoDelete);
     	
     }
     
